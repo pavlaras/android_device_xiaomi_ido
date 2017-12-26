@@ -88,9 +88,9 @@ static void init_alarm_boot_properties()
      * 8 -> KPDPWR_N pin toggled (power key pressed)
      */
      if (boot_reason == 3) {
-        property_set("ro.alarm_boot", "true");
+        android::init::property_set("ro.alarm_boot", "true");
      } else {
-        property_set("ro.alarm_boot", "false");
+        android::init::property_set("ro.alarm_boot", "false");
      }
 }
 
@@ -99,11 +99,11 @@ void vendor_load_properties()
     check_device();
     init_alarm_boot_properties();
 
-    property_set("dalvik.vm.heapstartsize", heapstartsize);
-    property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
-    property_set("dalvik.vm.heapsize", heapsize);
-    property_set("dalvik.vm.heaptargetutilization", "0.75");
-    property_set("dalvik.vm.heapminfree", heapminfree);
-    property_set("dalvik.vm.heapmaxfree", "8m");
+    android::init::property_set("dalvik.vm.heapstartsize", heapstartsize);
+    android::init::property_set("dalvik.vm.heapgrowthlimit", heapgrowthlimit);
+    android::init::property_set("dalvik.vm.heapsize", heapsize);
+    android::init::property_set("dalvik.vm.heaptargetutilization", "0.75");
+    android::init::property_set("dalvik.vm.heapminfree", heapminfree);
+    android::init::property_set("dalvik.vm.heapmaxfree", "8m");
 }
 

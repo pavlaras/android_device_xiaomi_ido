@@ -22,7 +22,6 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_C_INCLUDES := system/core/init
 LOCAL_SRC_FILES := init_ido.cpp
 LOCAL_MODULE := libinit_ido
-LOCAL_STATIC_LIBRARIES := \
-    libbase
+LOCAL_STATIC_LIBRARIES := libbase libselinux
 
 include $(BUILD_STATIC_LIBRARY)
